@@ -33,4 +33,4 @@ The research project is supported by Siemens Healthineers, R01DK098503, R01HL094
 - Mesh voxelisation: https://www.mathworks.com/matlabcentral/fileexchange/27390-mesh-voxelisation Copyright (c) 2013, Adam H. Aitkenhead. All rights reserved.
 
 ### Bugs and Questions
-Please contact Wei-Ching Lo at wxl317@case.edu and Nicole Seiberlich at nes30@case.edu.
+Please contact Tina (Wei-Ching) Lo at wxl317@case.edu and Nicole Seiberlich at nes30@case.edu.
