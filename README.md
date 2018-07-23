@@ -11,11 +11,13 @@ If you have used the Fessler Toolbox, please also cite the following paper:
 - Fessler JA. On NUFFT-based gridding for non-Cartesian MRI. J. Magn. Reson. 2007;188:191–195.
 
 ### Downloading
-Please download and install the Fessler Toolbox for non-Cartesian NUFFT-based gridding
+Please download and install the Fessler Toolbox for non-Cartesian NUFFT-based gridding.
 Fessler Toolbox: http://web.eecs.umich.edu/~fessler/irt/fessler.tgz
 
 ### Notes
 The Abdominal_MR_Phantom source code includes phantom generation, data acquisition, and reconstruction.
+Please start with the main script "main_phantom_generation.m".
+
 - Part1: Phantom generation<br />
 (1)	Define tissue properties and respiratory motion.<br />
 (2)	Generate voxelized volumetric masks with indexes.<br />
