@@ -3,6 +3,8 @@ Realistic 4D abdominal phantom for magnetic resonance imaging.
 
 In the spirit of reproducible research, our 4D abdominal MR phantom is made available online to the community. The source codes are available as a MATLAB package and can be found at https://github.com/SeiberlichLab/Abdominal_MR_Phantom.
 
+![Optional Text](../master/phantom_demo_image.png)
+
 ### Citing
 If you have used Abdominal_MR_Phantom in a scientific publication, we would appreciate citations to the following paper:
 - Lo W-C, Chen Y, Jiang Y, Gulani V, Seiberlich N. Realistic 4D abdominal phantom for magnetic resonance imaging. Proc Intl Soc Mag Reson Med, Honolulu, 2017, #1231.
