@@ -59,6 +59,14 @@ function cmap = generateCoilMap(imsize,nc,sigma,ang)
     end
     % END coilmap_3D()
 
+    function [ op ] = rotatePoint( p, angle )
+        %ROTATEPOINT Rotate points
+        %   p is point in 3D, R is rotation ismatrix
+        theta = angle*pi/180;
+        rotationMatrix = [cos(theta) -sin(theta) 0; sin(theta) cos(theta) 0; 0 0 1];
+        op = rotationMatrix * p;
+    end
+
 cmap = [];
 
 if ~(exist('sigma','var'))
