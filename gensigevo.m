@@ -64,7 +64,7 @@ for idf = 1:numel(seqparam.dfrange)
         T1 = r(ir).T1/1000;
         T2 = r(ir).T2/1000;
         
-        M0 = repmat([0;0;1],[1 Nspins]);
+        M0 = [zeros(2,Nspins);ones(1,Nspins)];
         M = zeros(3,Nspins,Nex,Necho);
         Mtmp = M0;        
         rf = 0; % initial rf phase
@@ -168,5 +168,27 @@ else
     sigevo(:,:,1) = reshape(sigdata.*repmat((1-FF),[Nex*Necho 1]),[Nex*Necho cnt]);
     sigevo(:,:,2) = reshape(sigdata.*repmat(FF,[Nex*Necho 1]),[Nex*Necho cnt]);
 end
+
+
+function [M] = zrot(phi)
+
+c = cos(phi);
+s = sin(phi);
+
+M = [c -s 0; s c 0; 0 0 1];
+
+function [M] = yrot(phi)
+
+c = cos(phi);
+s = sin(phi);
+
+M = [c 0 s; 0 1 0; -s 0 c];
+
+function [M] = xrot(phi)
+
+c = cos(phi);
+s = sin(phi);
+
+M = [1 0 0; 0 c -s; 0 s c];
 
 fprintf('Signal simulation done\n');

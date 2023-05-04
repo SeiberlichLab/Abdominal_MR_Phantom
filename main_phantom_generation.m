@@ -125,8 +125,7 @@ end
 opts = prepareNUFFT(mtx,np,samptraj,'linear_sorted','fov',fov,'FWshift',FWshift);
 
 % Load in-vivo/simulated coil sensitivity maps
-load(coilmap);
-cmap = gencmap([mtx mtx npar],nc,origcmap);
+cmap = gencmap([mtx mtx npar],nc);
 
 % Sequence parameters
 [seqparam,defseq] = setseqparam(sigtype,[np npar nset],sampmode);
@@ -155,6 +154,7 @@ fprintf('Data acquisition done\n');
 
 % Convert 4D phantom k-space to images
 reconimg = ksp2img(mixsamp,opts,cmap);
+save([savename '_reconimg.mat'],'reconimg','-v7.3')
 fprintf('Data reconstruction done\n');
 
 % Show phantom images
